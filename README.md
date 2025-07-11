@@ -1,5 +1,5 @@
-#2-Way In-Order MIPS Superscalar Processor
-
+**#2-Way In-Order MIPS Superscalar Processor
+**
 This project implements a 2-way in-order MIPS superscalar processor using Verilog, deployed on an Altera MAX-10 FPGA for the Jordan National Semiconductors Competition, where it secured a top 10 position in the finals. The design emphasizes hardware simplicity, offloading complex tasks like instruction scheduling, assembly, and exception handling to software, with a file-based input/output system to manage the toolchain.
 
 Project Overview
