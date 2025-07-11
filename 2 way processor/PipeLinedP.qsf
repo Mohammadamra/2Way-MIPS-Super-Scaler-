@@ -1,0 +1,190 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2016  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+# Date created = 19:33:22  October 29, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PipeLinedP_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY TwoWaysTopModule
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:33:22  OCTOBER 29, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_B8 -to Reset
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT simulation/modelsim/HUH3.do -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.v -section_id testbench
+set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name QII_AUTO_PACKED_REGISTERS NORMAL
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name ROUTER_CLOCKING_TOPOLOGY_ANALYSIS ON
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+
+# The following assignments have been added by quartus_dse for group dse100
+
+
+set_global_assignment -name VERILOG_FILE TwoWaysTopModule.v
+set_global_assignment -name VERILOG_FILE regfile.v
+set_global_assignment -name VERILOG_FILE controller1.v
+set_global_assignment -name VERILOG_FILE controller0.v
+set_global_assignment -name VERILOG_FILE WayAdder.v
+set_global_assignment -name QIP_FILE dataMemory.qip
+set_global_assignment -name VERILOG_FILE InstructionDecoder.v
+set_global_assignment -name VERILOG_FILE Gshare.v
+set_global_assignment -name VERILOG_FILE BranchPreddictionUnit.v
+set_global_assignment -name VERILOG_FILE Branch_compare.v
+set_global_assignment -name VERILOG_FILE Tournament_predictor.v
+set_global_assignment -name VERILOG_FILE Dynamic_predictor.v
+set_global_assignment -name SDC_FILE PipeLinedP.out.sdc
+set_global_assignment -name VERILOG_FILE testbench.v
+set_global_assignment -name VERILOG_FILE EX_MEM_Pipe.v
+set_global_assignment -name VERILOG_FILE IF_ID_Pipe.v
+set_global_assignment -name VERILOG_FILE Program_Counter.v
+set_global_assignment -name VERILOG_FILE Adder.v
+set_global_assignment -name VERILOG_FILE MUX2x1.v
+set_global_assignment -name VERILOG_FILE sign_extend_unit.v
+set_global_assignment -name VERILOG_FILE shifter.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE MUX3x1.v
+set_global_assignment -name VERILOG_FILE MEM_WB_Pipe.v
+set_global_assignment -name VERILOG_FILE forwarding_unit.v
+set_global_assignment -name VERILOG_FILE hazard_detection_unit.v
+set_global_assignment -name VERILOG_FILE ID_EX_Pipe.v
+set_global_assignment -name MIF_FILE instructionMemoryInitializationFile.mif
+set_global_assignment -name MIF_FILE dataMemoryInitializationFile.mif
+set_global_assignment -name SOURCE_FILE db/PipeLinedP.cmp.rdb
+set_global_assignment -name VERILOG_FILE TwoWayInstMem.v
+set_global_assignment -name QIP_FILE TwoWayInstMem.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_D8 -to instruction_0[31]
+set_location_assignment PIN_A4 -to instruction_0[30]
+set_location_assignment PIN_D10 -to instruction_0[29]
+set_location_assignment PIN_A2 -to instruction_0[28]
+set_location_assignment PIN_F7 -to instruction_0[27]
+set_location_assignment PIN_E8 -to instruction_0[26]
+set_location_assignment PIN_B7 -to instruction_0[25]
+set_location_assignment PIN_B3 -to instruction_0[24]
+set_location_assignment PIN_A3 -to instruction_0[23]
+set_location_assignment PIN_C3 -to instruction_0[22]
+set_location_assignment PIN_B2 -to instruction_0[21]
+set_location_assignment PIN_W11 -to instruction_0[20]
+set_location_assignment PIN_N5 -to instruction_0[19]
+set_location_assignment PIN_L1 -to instruction_0[18]
+set_location_assignment PIN_C2 -to instruction_0[17]
+set_location_assignment PIN_N2 -to instruction_0[16]
+set_location_assignment PIN_D9 -to instruction_0[15]
+set_location_assignment PIN_A6 -to instruction_0[14]
+set_location_assignment PIN_J10 -to instruction_0[13]
+set_location_assignment PIN_C6 -to instruction_0[12]
+set_location_assignment PIN_B4 -to instruction_0[11]
+set_location_assignment PIN_C8 -to instruction_0[10]
+set_location_assignment PIN_E11 -to instruction_0[9]
+set_location_assignment PIN_C7 -to instruction_0[8]
+set_location_assignment PIN_E10 -to instruction_0[7]
+set_location_assignment PIN_E9 -to instruction_0[6]
+set_location_assignment PIN_D5 -to instruction_0[5]
+set_location_assignment PIN_A5 -to instruction_0[4]
+set_location_assignment PIN_B5 -to instruction_0[3]
+set_location_assignment PIN_C5 -to instruction_0[2]
+set_location_assignment PIN_H11 -to instruction_0[1]
+set_location_assignment PIN_AA10 -to instruction_0[0]
+set_location_assignment PIN_W3 -to instruction_1[31]
+set_location_assignment PIN_N9 -to instruction_1[30]
+set_location_assignment PIN_V10 -to instruction_1[29]
+set_location_assignment PIN_R11 -to instruction_1[28]
+set_location_assignment PIN_AA9 -to instruction_1[27]
+set_location_assignment PIN_AA8 -to instruction_1[26]
+set_location_assignment PIN_AB9 -to instruction_1[25]
+set_location_assignment PIN_V9 -to instruction_1[24]
+set_location_assignment PIN_R3 -to instruction_1[23]
+set_location_assignment PIN_L2 -to instruction_1[22]
+set_location_assignment PIN_M9 -to instruction_1[21]
+set_location_assignment PIN_M1 -to instruction_1[20]
+set_location_assignment PIN_C4 -to instruction_1[19]
+set_location_assignment PIN_D7 -to instruction_1[18]
+set_location_assignment PIN_K2 -to instruction_1[17]
+set_location_assignment PIN_P3 -to instruction_1[16]
+set_location_assignment PIN_V7 -to instruction_1[15]
+set_location_assignment PIN_Y4 -to instruction_1[14]
+set_location_assignment PIN_AB4 -to instruction_1[13]
+set_location_assignment PIN_AA7 -to instruction_1[12]
+set_location_assignment PIN_W7 -to instruction_1[11]
+set_location_assignment PIN_AB7 -to instruction_1[10]
+set_location_assignment PIN_R10 -to instruction_1[9]
+set_location_assignment PIN_Y6 -to instruction_1[8]
+set_location_assignment PIN_AB5 -to instruction_1[7]
+set_location_assignment PIN_M2 -to instruction_1[6]
+set_location_assignment PIN_P10 -to instruction_1[5]
+set_location_assignment PIN_AB8 -to instruction_1[4]
+set_location_assignment PIN_AA5 -to instruction_1[3]
+set_location_assignment PIN_Y10 -to instruction_1[2]
+set_location_assignment PIN_AA6 -to instruction_1[1]
+set_location_assignment PIN_AB6 -to instruction_1[0]
+set_global_assignment -name VERILOG_FILE Issue_Logic.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
