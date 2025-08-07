@@ -1,4 +1,4 @@
-# 🚀 Two-Way Superscalar Processor in Verilog HDL
+#  Two-Way Superscalar Processor in Verilog HDL
 
 **A high-performance MIPS-compatible processor architecture** designed to execute **two instructions per clock cycle** using dual-issue superscalar techniques. This project reimagines the classic five-stage pipeline to achieve near-ideal throughput, advanced dependency handling, and real-world simulation support.
 
